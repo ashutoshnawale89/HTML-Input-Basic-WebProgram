@@ -13,8 +13,6 @@ function hello(event)
         alert("Enter valid email");
         document.getElementById("name-err").innerHTML ="enter a valid email ! ";
      }
-
-    
 }
 
 function check(event)
