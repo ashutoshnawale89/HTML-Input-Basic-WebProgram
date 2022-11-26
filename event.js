@@ -1,28 +1,28 @@
 function hello(event)
 {
     event.preventDefault();
-    let emailRegex = /^[a-zA-Z]+[.+-]?[A-Za-z0-9]*[@][A-Za-z0-9]+[.+-][A-Za-z0-9]{2,}[.]*[A-Za-z]*$/;
-    let email = document.getElementById('email').value;
+    let mobileRegex = /^[9]{1}[1]{1}[-]?[6-9]{1}[0-9]{9}$/;
+    let mobile = document.getElementById('mobile').value;
 
-    if(emailRegex.test(email))
+    if(mobileRegex.test(mobile))
      {
-        localStorage.setItem("email",email);
-        alert("Hello, "+ localStorage.getItem("email"));
+        localStorage.setItem("mobile",mobile);
+        alert("Hello, "+ localStorage.getItem("mobile"));
      }else
      {
-        alert("Enter valid email");
-        document.getElementById("name-err").innerHTML ="enter a valid email ! ";
+        alert("Enter valid mobile Number");
+        document.getElementById("name-err").innerHTML ="enter a valid Mobile Number ! ";
      }
 }
 
 function check(event)
 {
     event.preventDefault();
-    let emailRegex = /^[A-Z]{1}[a-z]{2,}$/;
-    let email = document.getElementById('name').value;
+    let  mobileRegex = /^[A-Z]{1}[a-z]{2,}$/;
+    let  mobile = document.getElementById(' mobile').value;
 
-    if(!firstNameRegex.test(email))
-    document.getElementById("name-err").innerHTML ="Min 3 chars & first letter capital!"
+    if(! mobileRegex.test( mobile))
+    document.getElementById("name-err").innerHTML ="Enter Valid Mobile Number !"
    else
    document.getElementById("name-err").innerHTML =""
 }
